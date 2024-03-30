@@ -9,17 +9,22 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header {
             background-color: #4CAF50;
             color: white;
             padding: 20px;
             text-align: center;
+            width: 100%;
         }
         nav {
             background-color: #333;
             padding: 10px;
             text-align: center;
+            width: 100%;
         }
         nav a {
             color: #fff;
@@ -31,78 +36,24 @@
         }
         main {
             padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px; /* Limit main content width */
             margin-top: 20px;
         }
-        .photo {
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-            width: 30%;
+        .sidebar {
+            background-color: #f1f1f1;
+            padding: 20px;
+            width: 200px;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px); /* Adjust based on header and footer height */
+            overflow-y: auto;
         }
-        .photo:hover {
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        .content {
+            flex: 1;
         }
-        .photo img {
-            width: 100%;
-            height: auto;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Travel Photography Blog</h1>
-    </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <main>
-        <section id="home">
-            <h2>Welcome to our Travel Photography Blog!</h2>
-            <p>Explore the world through our lens.</p>
-        </section>
-        <section id="gallery">
-            <h2>Photo Gallery</h2>
-            <div class="container">
-                <div class="photo">
-                    <img src="photo1.jpg" alt="Photo 1">
-                </div>
-                <div class="photo">
-                    <img src="photo2.jpg" alt="Photo 2">
-                </div>
-                <div class="photo">
-                    <img src="photo3.jpg" alt="Photo 3">
-                </div>
-                <!-- Add more photos -->
-            </div>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are passionate travel photographers exploring the world and capturing its beauty through our lenses.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: example@example.com</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Travel Photography Blog. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        footer {
+          
